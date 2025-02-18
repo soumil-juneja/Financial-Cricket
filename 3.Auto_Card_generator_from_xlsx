@@ -1,12 +1,13 @@
-We want each row in an Excel file to automatically generate a slide in a PowerPoint presentation, 
+We needed each row in an Excel file to automatically generate a slide in a PowerPoint presentation, 
 with the data displayed on a card for the auction.
-The code to do that is as follows.
 
-We ended up not using this because this was going to make it like a ppt. we wanted it to be like playing cards( to distribute as well)
-Anyways this code needs to be run in GOOGLE DOCS > Extensions > apps script.
+We ended up not using this because this was going to make it like a ppt. we wanted it to be like playing cards (to distribute as well)
+Anyways, this code needs to be run in GOOGLE DOCS > Extensions > apps script.
 
-Ultimately
+Ultimately,
 We used the code in Card_generator.ipynb
+
+The code to do xlsx to slides is as follows.
 
 function createPlayerCards() {
   const data = [
@@ -51,7 +52,7 @@ function createPlayerCards() {
     ['Abhishek Poral', 45, 42, 1200, 128.5, 29.3, 10, 52],
     ['Ben Duckett', 45, 42, 1200, 129.9, 28.7, 9, 54],
     ['Rahmanullah Gurbaz', 40, 38, 1000, 128.7, 25.3, 10, 50]
-  ];
+];
 
   const presentation = SlidesApp.create('Player Cards');
 
@@ -75,7 +76,7 @@ function createPlayerCards() {
     `;
     const statsTextBox = slide.insertTextBox(stats, 50, 150, 500, 200);
 
-    // Optional: Add background color or image (you can replace the below with actual color or image)
+    // Optional
     slide.getBackground().setSolidFill('#f0f0f0'); // Light gray background
   }
 
